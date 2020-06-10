@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+    com.mall.web.config.Swagger2Config,\
+    com.mall.web.config.RestTemplateConfig,\
+    com.mall.web.config.WebConfig

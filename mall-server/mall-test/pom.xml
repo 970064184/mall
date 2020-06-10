@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>mall-parent</artifactId>
+        <groupId>com.mall</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../../mall-parent/pom.xml</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>mall-test</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>mall-test</name>
+    <description>测试项目</description>
+    <packaging>jar</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.mall</groupId>
+            <artifactId>mall-web-starter</artifactId>
+        </dependency>
+
+        <!--解决spring boot bootstrap.yml 不加载，不生效问题，因为SpringBoot本身并不支持bootstrap.yml文件，需要和Spring Cloud 的组件结合——只有加上Spring Cloud Context依赖才能生效(或者使用springcloud的任意组件)-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-context</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.mall</groupId>
+            <artifactId>mall-orm-starter</artifactId>
+        </dependency>
+    </dependencies>
+
+
+</project>

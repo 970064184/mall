@@ -1,0 +1,18 @@
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*Mapper.xml
+
+---
+spring:
+  profiles: dev
+#SQL日志打印
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+---
+spring:
+  profiles: test
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

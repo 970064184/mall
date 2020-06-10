@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.2.2.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <groupId>com.mall</groupId>
+    <artifactId>mall-parent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>mall-parent</name>
+    <description>所有项目的父项目</description>
+    <packaging>pom</packaging>
+
+    <properties>
+        <!--跳过测试用例的执行-->
+        <maven.test.skip>true</maven.test.skip>
+        <java.version>11</java.version>
+        <spring-cloud.version>Hoxton.SR1</spring-cloud.version>
+        <redisson.version>3.12.5</redisson.version>
+        <mybatis-plus.version>3.3.1</mybatis-plus.version>
+        <mybatis-plus-generator.version>3.3.0</mybatis-plus-generator.version>
+        <freemarker.version>2.3.29</freemarker.version>
+        <pagehelper.version>1.2.13</pagehelper.version>
+        <druid.version>1.1.21</druid.version>
+        <springfox-swagger2.version>2.9.2</springfox-swagger2.version>
+        <fastjson.version>1.2.67</fastjson.version>
+
+        <!--自定义的starter-->
+        <base.version>0.0.1-SNAPSHOT</base.version>
+        <web.starter.version>0.0.1-SNAPSHOT</web.starter.version>
+        <orm.starter.version>0.0.1-SNAPSHOT</orm.starter.version>
+        <redis.starter.version>0.0.1-SNAPSHOT</redis.starter.version>
+
+    </properties>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.junit.vintage</groupId>
+                    <artifactId>junit-vintage-engine</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+    </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <!--spring cloud-->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!--分布式锁-->
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson</artifactId>
+                <version>${redisson.version}</version>
+            </dependency>
+
+            <!--mybatis-plus-->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+
+            <!--代码生成器依赖-->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-generator</artifactId>
+                <version>${mybatis-plus-generator.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.freemarker</groupId>
+                <artifactId>freemarker</artifactId>
+                <version>${freemarker.version}</version>
+            </dependency>
+            <!--mybatis分页查询插件-->
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper-spring-boot-starter</artifactId>
+                <version>${pagehelper.version}</version>
+            </dependency>
+
+
+            <!--自定义starter-->
+            <dependency>
+                <groupId>com.mall</groupId>
+                <artifactId>mall-base</artifactId>
+                <version>${base.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.mall</groupId>
+                <artifactId>mall-orm-starter</artifactId>
+                <version>${orm.starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.mall</groupId>
+                <artifactId>mall-redis-starter</artifactId>
+                <version>${redis.starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.mall</groupId>
+                <artifactId>mall-web-starter</artifactId>
+                <version>${web.starter.version}</version>
+            </dependency>
+
+            <!--swagger2-->
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${springfox-swagger2.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${springfox-swagger2.version}</version>
+            </dependency>
+            <!--json工具类-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+            <!--数据库连接池-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>mall-parent</artifactId>
+        <groupId>com.mall</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../../mall-parent/pom.xml</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>mall-web-starter</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>mall-web-starter</name>
+    <description>springmvc 基础配置</description>
+    <packaging>jar</packaging>
+
+    <dependencies>
+
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+
+        <dependency>
+            <groupId>com.mall</groupId>
+            <artifactId>mall-base</artifactId>
+        </dependency>
+    </dependencies>
+
+    <!--<build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            &lt;!&ndash;添加配置跳过测试&ndash;&gt;
+           &lt;!&ndash; <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.2</version>
+                <configuration>
+                    <skipTests>true</skipTests>
+                </configuration>
+            </plugin>&ndash;&gt;
+        </plugins>
+    </build>-->
+
+</project>

@@ -1,0 +1,22 @@
+spring:
+  profiles:
+    active: test
+    include: web,orm
+
+---
+server:
+  port: 8081
+
+spring:
+  profiles: dev
+swagger:
+  enable: enable
+
+---
+server:
+  port: 8082
+
+spring:
+  profiles: test
+swagger:
+  enable: enable
