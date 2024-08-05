@@ -20,7 +20,7 @@
         <maven.test.skip>true</maven.test.skip>
         <java.version>11</java.version>
         <spring-cloud.version>Hoxton.SR1</spring-cloud.version>
-        <redisson.version>3.12.5</redisson.version>
+        <redisson.version>3.22.0</redisson.version>
         <mybatis-plus.version>3.3.1</mybatis-plus.version>
         <mybatis-plus-generator.version>3.3.0</mybatis-plus-generator.version>
         <freemarker.version>2.3.29</freemarker.version>
